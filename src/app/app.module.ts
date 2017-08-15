@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { firebaseConfig } from './../environments/firebase.config';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TodosComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
