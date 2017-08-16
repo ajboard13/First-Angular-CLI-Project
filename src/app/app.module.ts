@@ -13,6 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule }   from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 const routes: Routes = [
   { path: '', component: HomePageComponent, canActivate: [AuthGuard]},
@@ -35,7 +36,8 @@ const routes: Routes = [
     AngularFireDatabaseModule ,
     AngularFireAuthModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]

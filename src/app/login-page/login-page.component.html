@@ -1,8 +1,8 @@
 
 <div class="form-container">
-  <img src="assets/images/lock.svg" id="lock">
+  <img src="../assets/images/lock.svg" id="lock">
   <span class="error" *ngIf = "error" >{{error}}</span>
-  <h1>Login to your account</h1><br>
+  <h1 style="text-align: center">Login to your account</h1><br>
   <button class="btn btn-default" (click)="loginGoogle()"id="google">Login with Google</button><br><br>
   <button class="btn btn-default" (click)="loginFb()"id= "fb">Login with Facebook</button><br><br>
   <button class="btn btn-default" routerLink = "/login-email" id="email">Email</button><br><br>
