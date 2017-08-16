@@ -1,7 +1,9 @@
-<div class="container">
-<div class="jumbotron">
-  <h1>Welcome</h1>
-  <p>You should see these only when you log in</p>
-  <p><button class="btn btn-default" (click) = "logout()">Log out</button></p>
-</div>
+<div class="form-container" id="toolbar">
+  <header [@fallIn]="state">
+    <button (click)="logout()" class="basic-btn">Logout</button>
+  </header>
+  <div id="page" [@moveInLeft]="state">
+    <h2> Hey {{name}}!</h2>
+    <img src="assets/images/filler.png" />
+  </div>
 </div>
